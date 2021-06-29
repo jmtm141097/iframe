@@ -46,7 +46,8 @@ async function sendData() {
         browser: (detector.userAgent()) ? detector.userAgent() : sBrowser,
         platform: (detector.os()) ? detector.os() : window.navigator.platform,
         lenguage: window.navigator.language,
-        token: urlParams.get('tk')
+        token: urlParams.get('tk'),
+        locked: false
     };
     await API.post(URL, activity, {
             headers: {
